@@ -39,6 +39,8 @@ class linkedList {
         prevNode.next = newNode
     }
 
+//  deletion in linked list
+
     deletehead() {
         if (!this.head) {   // in case of empty list
             return;    
@@ -56,7 +58,8 @@ class linkedList {
         secondLast.next = null;
     }
 
-    deleteKey(key){
+    deleteKey(key)
+    {
         if (!this.head) {
             return
         }
@@ -75,7 +78,8 @@ class linkedList {
         }
     }
 
-    keyPresent(key) {
+    keyPresent(key)     // checking if key is present in the list
+    {
         while(this.head) {
             if (this.head.data == key) {
                 return  `key ${key} is present in the list`
@@ -84,7 +88,7 @@ class linkedList {
         }
     }
 
-    traversal() {
+    traversal() {       // traversing the linked list
         let current = this.head
         let arr = []
 
@@ -95,7 +99,8 @@ class linkedList {
         return arr.join(" -> ")
     }
 
-    reverse() {
+    reverse()   // reversing the linked list
+    {
         let current = this.head
         let prev = null
         let next = null
