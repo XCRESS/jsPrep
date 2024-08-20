@@ -31,4 +31,17 @@ class doublyLinkedList{
         }
         this.tail = newNode
     }
+
+    insertAtPosition(data, prevNode){
+        const newNode = new Node(data, prevNode.next, prevNode);
+        if (prevNode) {
+            prevNode.next.prev = newNode;
+        }
+        prevNode.next = newNode;
+        
+        if (!newNode.next) {
+            this.tail = newNode;
+        }
+    }
+
 }
