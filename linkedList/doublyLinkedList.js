@@ -44,4 +44,29 @@ class doublyLinkedList{
         }
     }
 
+    deleteHead(){
+        if(!this.head){
+            return
+        }
+        if(!this.head.next){
+            this.head = null
+            this.tail = null
+            return
+        }
+        this.head = this.head.next
+        this.head.prev = null
+    }
+
+    deleteTail(){
+        if(!this.tail){
+            return
+        }
+        if(!this.tail.prev){
+            this.head = null
+            this.tail = null
+            return
+        }
+        this.tail = this.tail.prev
+        this.tail.next = null
+    }
 }
