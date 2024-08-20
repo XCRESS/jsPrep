@@ -15,11 +15,20 @@ class doublyLinkedList{
     insertAtBegining(data){
         const newNode = new Node(data, this.head, null)
         if(!this.head){
-            this.head = newNode
             this.tail = newNode
         }else{
             this.head.prev = newNode
-            this.head = newNode
         }
+        this.head = newNode
+    }
+
+    insertAtEnd(data){
+        const newNode = new Node(data, null, this.tail)
+        if(!this.head){
+            this.head = newNode
+        }else{
+            this.tail.next = newNode
+        }
+        this.tail = newNode
     }
 }
