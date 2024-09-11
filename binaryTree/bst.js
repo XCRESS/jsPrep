@@ -76,4 +76,18 @@ class bst{
         }
         return node;
     }
+
+    inorderTraversal(){
+        const result = [];
+        this.inorder(this.root, result);
+        return result;
+    }
+
+    inorder(){
+        if(node !== null){
+            this.inorder(node.left, result);
+            result.push(node.key);
+            this.inorder(node.right, result);
+        }
+    }
 }
