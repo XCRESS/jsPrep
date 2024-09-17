@@ -6,7 +6,6 @@ const key = 1
 function firstOccur(ary) {   
     let foundAt = []
     for (let i = 0; i < ary.length; i++) {
-        console.log(i);
         if (key==ary[i]) {
          foundAt.push(i); 
         }
